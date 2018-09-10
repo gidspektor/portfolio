@@ -1,0 +1,116 @@
+{box-sizing: border-box}
+
+
+
+body{
+
+}
+
+nav{
+    height: 120px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+nav img{
+    margin-left: 50px;
+}
+
+.navright{
+    float: right;
+    margin-right: 200px;
+    padding-top: 30px;
+}
+
+.burgerbox{
+    width: 30px;
+    height: 30px;
+    background-color: #000000;
+    float: right;
+    margin-right: 200px;
+    margin-top: 70px;
+    opacity: 0.7;
+    display: none;
+}
+
+
+.dropdown{
+    float: right;
+    margin-right: 200px;
+    padding-top: 30px;
+    display: none;
+}
+
+.dropbtn{
+    background-color: #000000;
+    padding: 16px;
+    border: none;
+}
+nav li{
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.litext{
+    font-family: "Arial Rounded MT Bold";
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 50px;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.litext2{
+    font-family: "Arial Rounded MT Bold";
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 50px;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    padding: 10px;
+    font-size: 13px;
+    display:none;
+}
+
+.dropdown:hover .litext2{
+    display: block;
+}
+
+
+.litext:hover{
+    border-color: #000000;
+}
+
+.pageone{
+    height: 700px;
+    opacity: 0.6;
+}
+
+.pages{
+    height: 700px;
+}
+
+
+.mainimg{
+    background-image: url("tree.png");
+    background-size: 100% 100%;
+}
+
+
+@media screen and (max-width: 800px){
+    .navright{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .dropdown{
+        display: block;
+    }
+}
