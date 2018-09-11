@@ -1,7 +1,11 @@
-* {box-sizing: border-box}
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
+    text-align: center;
+    font-family: Georgia, sans-serif;
 }
 
 nav {
@@ -12,7 +16,8 @@ nav {
 }
 
 nav img {
-    margin-left: 10%;
+    margin-left: 5%;
+    float: left;
 }
 
 .navRight {
@@ -24,7 +29,7 @@ nav img {
 
 .dropdown {
     float: right;
-    margin-right: 200px;
+    margin-right: 20%;
     margin-top: 70px;
     display: none;
     background-image: url("button.png");
@@ -44,7 +49,7 @@ nav li {
 }
 
 .navText {
-    font-family: "Arial Rounded MT Bold";
+    font-family: "Arial Rounded MT Bold", sans-serif, "Times New Roman";
     font-weight: bold;
     text-transform: uppercase;
     margin-right: 50px;
@@ -53,6 +58,7 @@ nav li {
     border-bottom: 3px solid transparent;
     padding: 10px;
     font-size: 13px;
+    transition: 0.5s ease-in-out;
 }
 
 .dropdown:hover .navText {
@@ -68,23 +74,87 @@ nav li {
 .pageOne {
     height: 700px;
     opacity: 0.6;
+    background-image: url("tree.png");
+    background-size: 100% 100%;
+
 }
 
 .pages {
     height: 700px;
 }
 
+.home {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 180px;
+    text-align: center;
+}
 
-.mainImg {
-    background-image: url("tree.png");
-    background-size: 100% 100%;
+.home h1 {
+    font-size: 3.5rem;
+    margin-bottom: -5%;
+    letter-spacing: 1px;
+}
+
+.home h2 {
+    font-size: 2.5rem;
+}
+
+
+.home button {
+    background: transparent;
+    width: 30%;
+    padding: 1em;
+    font-size: 18px;
+    font-weight: bold;
+    border-color: #000000;
+    border: 3px solid;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+    border-radius: 20px;
+}
+
+.home button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: #ffffff;
 }
 
 @media screen and (max-width: 800px) {
     .dropdown {
         display: block;
     }
-    .navRight{
+    .navRight {
         display: none;
+    }
+    .home button {
+        width: 60%;
+    }
+    .home h1 {
+        font-size: 3rem;
+    }
+    .home h2{
+         font-size: 2rem;
+     }
+}
+
+@media screen and (max-width: 600px) {
+    .home h1 {
+        font-size: 2.5rem;
+    }
+    .home h2{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .home h1 {
+        font-size: 2rem;
+    }
+    .home h2{
+        font-size: 1.3rem;
+    }
+    .home button {
+        width: 90%;
     }
 }
