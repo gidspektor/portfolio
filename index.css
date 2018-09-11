@@ -18,7 +18,7 @@ nav img{
     margin-left: 50px;
 }
 
-.navright{
+.navRight{
     float: right;
     margin-right: 200px;
     padding-top: 30px;
@@ -43,7 +43,7 @@ nav li{
     margin-top: 30px;
 }
 
-.litext{
+.liText{
     font-family: "Arial Rounded MT Bold";
     font-weight: bold;
     text-transform: uppercase;
@@ -55,7 +55,7 @@ nav li{
     font-size: 13px;
 }
 
-.litext2{
+.liText2{
     font-family: "Arial Rounded MT Bold";
     font-weight: bold;
     text-transform: uppercase;
@@ -68,20 +68,20 @@ nav li{
     display:none;
 }
 
-.dropdown:hover .litext2{
+.dropdown:hover .liText2{
     display: block;
 }
 
 
-.litext:hover{
+.liText:hover{
     border-color: #000000;
 }
 
-.litext2:hover{
+.liText2:hover{
     opacity: 0.5;
 }
 
-.pageone{
+.pageOne{
     height: 700px;
     opacity: 0.6;
 }
@@ -91,7 +91,7 @@ nav li{
 }
 
 
-.mainimg{
+.mainImg{
     background-image: url("tree.png");
     background-size: 100% 100%;
 }
