@@ -1,4 +1,6 @@
-* {box-sizing: border-box}
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -78,6 +80,11 @@ nav li {
 .mainImg {
     background-image: url("tree.png");
     background-size: 100% 100%;
+}
+
+.home {
+    width: 300px;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 800px) {
