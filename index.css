@@ -1,31 +1,28 @@
 {box-sizing: border-box}
 
-
-
-body{
-
+body {
+    margin: 0;
 }
 
-nav{
-    height: 120px;
+nav {
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 3;
 }
 
-nav img{
-    margin-left: 50px;
+nav img {
+    margin-left: 10%;
 }
 
-.navRight{
+.navRight {
     float: right;
-    margin-right: 200px;
+    margin-right: 20%;
     padding-top: 30px;
 }
 
 
-.dropdown{
+.dropdown {
     float: right;
     margin-right: 200px;
     margin-top: 70px;
@@ -35,15 +32,18 @@ nav img{
     height: 5px;
     width: 5px;
     padding: 16px;
-    border: none;
 }
 
-nav li{
+.dropdown .navText {
+    display: none;
+}
+
+nav li {
     display: inline-block;
     margin-top: 30px;
 }
 
-.liText{
+.navText {
     font-family: "Arial Rounded MT Bold";
     font-weight: bold;
     text-transform: uppercase;
@@ -55,56 +55,40 @@ nav li{
     font-size: 13px;
 }
 
-.liText2{
-    font-family: "Arial Rounded MT Bold";
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-right: 50px;
-    color: #000000;
-    text-decoration: none;
-    border-bottom: 3px solid transparent;
-    padding: 10px;
-    font-size: 13px;
-    display:none;
-}
-
-.dropdown:hover .liText2{
+.dropdown:hover .navText {
     display: block;
+    margin-top: 10px;
 }
 
 
-.liText:hover{
+.navText:hover {
     border-color: #000000;
 }
 
-.liText2:hover{
-    opacity: 0.5;
-}
-
-.pageOne{
+.pageOne {
     height: 700px;
     opacity: 0.6;
 }
 
-.pages{
+.pages {
     height: 700px;
 }
 
 
-.mainImg{
+.mainImg {
     background-image: url("tree.png");
     background-size: 100% 100%;
 }
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     .navRight{
         display: none;
     }
 }
 
-@media screen and (max-width: 800px){
-    .dropdown{
+@media screen and (max-width: 800px) {
+    .dropdown {
         display: block;
     }
 }
