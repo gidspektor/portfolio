@@ -5,6 +5,7 @@
 body {
     margin: 0;
     text-align: center;
+    font-family: Georgia;
 }
 
 nav {
@@ -15,7 +16,8 @@ nav {
 }
 
 nav img {
-    margin-left: 10%;
+    margin-left: 5%;
+    float: left;
 }
 
 .navRight {
@@ -27,7 +29,7 @@ nav img {
 
 .dropdown {
     float: right;
-    margin-right: 200px;
+    margin-right: 20%;
     margin-top: 70px;
     display: none;
     background-image: url("button.png");
@@ -88,15 +90,13 @@ nav li {
 }
 
 .home h1 {
-    font-size: 400%;
+    font-size: 3.5rem;
     margin-bottom: -5%;
     letter-spacing: 1px;
-    font-family: Georgia;
 }
 
 .home h2 {
-    font-size: 300%;
-    font-family: Georgia;
+    font-size: 2.5rem;
 }
 
 
@@ -105,7 +105,6 @@ nav li {
     width: 40%;
     padding: 1em;
     font-size: 18px;
-    font-family: Georgia;
     font-weight: bold;
     border-color: #000000;
     border: 3px solid;
@@ -130,4 +129,11 @@ nav li {
     .home button {
         width: 90%;
     }
+    .home h1 {
+        font-size: 2.5rem;
+    }
+    .home h2{
+         font-size: 1.5rem;
+     }
+
 }
