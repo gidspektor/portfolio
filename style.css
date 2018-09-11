@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    text-align: center;
 }
 
 nav {
@@ -55,6 +56,7 @@ nav li {
     border-bottom: 3px solid transparent;
     padding: 10px;
     font-size: 13px;
+    transition: 0.5s ease-in-out;
 }
 
 .dropdown:hover .navText {
@@ -70,28 +72,62 @@ nav li {
 .pageOne {
     height: 700px;
     opacity: 0.6;
+    background-image: url("tree.png");
+    background-size: 100% 100%;
 }
 
 .pages {
     height: 700px;
 }
 
-
-.mainImg {
-    background-image: url("tree.png");
-    background-size: 100% 100%;
+.home {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 180px;
+    text-align: center;
 }
 
-.home {
-    width: 300px;
-    margin: 0 auto;
+.home h1 {
+    font-size: 400%;
+    margin-bottom: -5%;
+    letter-spacing: 1px;
+    font-family: Georgia;
+}
+
+.home h2 {
+    font-size: 300%;
+    font-family: Georgia;
+}
+
+
+.home button {
+    background: transparent;
+    width: 40%;
+    padding: 1em;
+    font-size: 18px;
+    font-family: Georgia;
+    font-weight: bold;
+    border-color: #000000;
+    border: 3px solid;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+    border-radius: 20px;
+}
+
+.home button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: #ffffff;
 }
 
 @media screen and (max-width: 800px) {
     .dropdown {
         display: block;
     }
-    .navRight{
+    .navRight {
         display: none;
+    }
+    .home button {
+        width: 90%;
     }
 }
