@@ -75,7 +75,8 @@ nav li {
     height: 700px;
     opacity: 0.6;
     background-image: url("tree.png");
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
 
 }
 
