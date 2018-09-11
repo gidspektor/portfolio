@@ -102,7 +102,7 @@ nav li {
 
 .home button {
     background: transparent;
-    width: 40%;
+    width: 30%;
     padding: 1em;
     font-size: 18px;
     font-weight: bold;
@@ -127,13 +127,33 @@ nav li {
         display: none;
     }
     .home button {
-        width: 90%;
+        width: 60%;
     }
+    .home h1 {
+        font-size: 3rem;
+    }
+    .home h2{
+         font-size: 2rem;
+     }
+}
+
+@media screen and (max-width: 600px) {
     .home h1 {
         font-size: 2.5rem;
     }
     .home h2{
-         font-size: 1.5rem;
-     }
+        font-size: 1.5rem;
+    }
+}
 
+@media screen and (max-width: 400px) {
+    .home h1 {
+        font-size: 2rem;
+    }
+    .home h2{
+        font-size: 1.3rem;
+    }
+    .home button {
+        width: 90%;
+    }
 }
