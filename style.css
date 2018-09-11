@@ -5,7 +5,7 @@
 body {
     margin: 0;
     text-align: center;
-    font-family: Georgia;
+    font-family: Georgia, sans-serif;
 }
 
 nav {
@@ -49,7 +49,7 @@ nav li {
 }
 
 .navText {
-    font-family: "Arial Rounded MT Bold";
+    font-family: "Arial Rounded MT Bold", sans-serif, "Times New Roman";
     font-weight: bold;
     text-transform: uppercase;
     margin-right: 50px;
@@ -76,6 +76,7 @@ nav li {
     opacity: 0.6;
     background-image: url("tree.png");
     background-size: 100% 100%;
+
 }
 
 .pages {
