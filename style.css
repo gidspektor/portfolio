@@ -10,27 +10,30 @@ body {
 
 nav {
     width: 100%;
+    height: 80px;
     position: fixed;
     top: 0;
+    background-color: #f0f8ff;
+    opacity: 0.4;
     z-index: 3;
 }
 
 nav img {
     margin-left: 5%;
     float: left;
+    height: 80px;
 }
 
 .navRight {
     float: right;
     margin-right: 20%;
-    padding-top: 30px;
+    padding-top: 5px;
 }
-
 
 .dropdown {
     float: right;
     margin-right: 20%;
-    margin-top: 70px;
+    margin-top: 40px;
     display: none;
     background-image: url("button.png");
     background-size: 100%;
@@ -72,16 +75,12 @@ nav li {
 }
 
 .pageOne {
-    height: 700px;
+    height: 768px;
     opacity: 0.6;
     background-image: url("tree.png");
     background-size: cover;
     background-position: center;
 
-}
-
-.pages {
-    height: 700px;
 }
 
 .home {
@@ -121,6 +120,28 @@ nav li {
     border: #ffffff;
 }
 
+.me {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.pageTwo {
+    height: 768px;
+    background-image: url("about.png");
+    background-size: 100% 100%;
+}
+
+.me h1 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid #000000;
+}
+
+.me p {
+    font-size: 1.5rem;
+}
+
 @media screen and (max-width: 800px) {
     .dropdown {
         display: block;
@@ -131,12 +152,22 @@ nav li {
     .home button {
         width: 60%;
     }
+    nav {
+        background-color: transparent;
+        opacity: 1;
+    }
     .home h1 {
         font-size: 3rem;
     }
     .home h2{
          font-size: 2rem;
      }
+    .me h1{
+        font-size: 2rem;
+    }
+    .me p {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -145,6 +176,12 @@ nav li {
     }
     .home h2{
         font-size: 1.5rem;
+    }
+    .me h1{
+        font-size: 1.5rem;
+    }
+    .me p {
+        font-size: 1rem;
     }
 }
 
@@ -157,5 +194,11 @@ nav li {
     }
     .home button {
         width: 90%;
+    }
+    .me h1{
+        font-size: 1.3rem;
+    }
+    .me p {
+        font-size: 1rem;
     }
 }
