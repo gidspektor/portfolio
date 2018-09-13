@@ -13,7 +13,6 @@ nav {
     width: 100%;
     height: 80px;
     position: fixed;
-    top: 0;
     background-color: #f0f8ff;
     opacity: 0.4;
     z-index: 3;
@@ -37,7 +36,7 @@ nav img {
     margin-right: 20%;
     margin-top: 40px;
     display: none;
-    background-image: url("button.png");
+    background-image: url("images/button.png");
     background-size: 100%;
     height: 5px;
     width: 5px;
@@ -54,7 +53,7 @@ nav li {
 }
 
 .navText {
-    font-family: "Arial Rounded MT Bold", sans-serif, "Times New Roman";
+    font-family: "Arial Rounded MT Bold", "sans-serif", "Times New Roman";
     font-weight: bold;
     text-transform: uppercase;
     margin-right: 50px;
@@ -79,7 +78,7 @@ nav li {
 .pageOne {
     height: 740px;
     opacity: 0.6;
-    background-image: url("tree.png");
+    background-image: url("images/tree.png");
     background-size: cover;
     background-position: center;
 
@@ -106,7 +105,6 @@ nav li {
 
 .home .button {
     display: inline-block;
-    background: transparent;
     width: 30%;
     padding: 1em;
     margin-top: 20px;
@@ -164,7 +162,7 @@ nav li {
 }
 
 .projOne {
-    background-image: url("bubbles.png");
+    background-image: url("images/bubbles.png");
     height: 300px;
     background-size: cover;
     transition: 0.3s ease-in-out;
@@ -176,16 +174,15 @@ nav li {
 
 .pageFour {
      height: 740px;
-     border: 2px solid black;
      padding-top: 200px;
-     background-image: url("rocks.png");
+     background-image: url("images/rocks.png");
      background-size: cover;
      background-position: center;
      opacity: 0.8;
 }
 
 .pageFour h1 {
-    border-bottom: 2px solid #0c4cb2;
+    border-bottom: 3px solid #0c4cb2;
     color: #0c4cb2;
     width: 25%;
     margin: 0 auto;
