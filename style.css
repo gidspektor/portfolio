@@ -182,7 +182,6 @@ nav li {
      background-size: cover;
      background-position: center;
      opacity: 0.8;
-
 }
 
 .pageFour h1 {
@@ -194,19 +193,28 @@ nav li {
 
 .myInfo {
     width: 80%;
-    height: 300px;
+    height: 400px;
     margin: 0 auto;
     font-size: large;
     font-weight: bold;
+    transition: 0.8s;
 }
 
 .email {
     text-decoration: none;
     color: #000000;
+    display: block;
 }
 .email:hover {
     color: #0c4cb2;
     font-weight: bold;
+}
+
+.pageFour img {
+    height: 50px;
+    width: 50px;
+    margin-top: 50px;
+    padding: 5px;
 }
 
 @media screen and (max-width: 800px) {
@@ -262,6 +270,10 @@ nav li {
     }
     .cards {
         width: 100%
+    }
+    .myInfo {
+        font-size: medium;
+        width: 100%;
     }
 }
 
