@@ -26,11 +26,6 @@ nav img {
     border-radius: 23px;
 }
 
-/*nav img:hover {*/
-    /*transform: scale(1.3);*/
-    /*!*transform: rotate(20deg);*!*/
-/*}*/
-
 .navRight {
     float: right;
     margin-right: 20%;
@@ -82,7 +77,7 @@ nav li {
 }
 
 .pageOne {
-    height: 768px;
+    height: 740px;
     opacity: 0.6;
     background-image: url("tree.png");
     background-size: cover;
@@ -109,20 +104,23 @@ nav li {
     transition: 0.8s;
 }
 
-.home button {
+.home .button {
+    display: inline-block;
     background: transparent;
     width: 30%;
     padding: 1em;
+    margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
-    border-color: #000000;
-    border: 3px solid;
+    border: 3px solid #000000;
+    color: #000000;
     text-transform: uppercase;
+    text-decoration: none;
     transition: 0.5s ease-in-out;
     border-radius: 20px;
 }
 
-.home button:hover {
+.home .button:hover {
     background-color: #ffffff;
     color: #000000;
     border: #ffffff;
@@ -136,7 +134,7 @@ nav li {
 }
 
 .pageTwo {
-    height: 700px;
+    height: 740px;
     background-image: radial-gradient(circle, #ffffff, #000000);
 }
 
@@ -149,10 +147,6 @@ nav li {
 .me p {
     font-size: 1.5rem;
     transition: 0.8s;
-}
-
-.pageThree {
-    height: 300px;
 }
 
 .showcase {
@@ -180,6 +174,41 @@ nav li {
     border-radius: 50%;
 }
 
+.pageFour {
+     height: 740px;
+     border: 2px solid black;
+     padding-top: 200px;
+     background-image: url("rocks.png");
+     background-size: cover;
+     background-position: center;
+     opacity: 0.8;
+
+}
+
+.pageFour h1 {
+    border-bottom: 2px solid #0c4cb2;
+    color: #0c4cb2;
+    width: 25%;
+    margin: 0 auto;
+}
+
+.myInfo {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    font-size: large;
+    font-weight: bold;
+}
+
+.email {
+    text-decoration: none;
+    color: #000000;
+}
+.email:hover {
+    color: #0c4cb2;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 800px) {
     .dropdown {
         display: block;
@@ -187,7 +216,7 @@ nav li {
     .navRight {
         display: none;
     }
-    .home button {
+    .home .button {
         width: 60%;
     }
     .home h1 {
@@ -243,7 +272,7 @@ nav li {
     .home h2{
         font-size: 1.3rem;
     }
-    .home button {
+    .home .button {
         width: 90%;
     }
     .me h1{
