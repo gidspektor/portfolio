@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio
-# Generation Time: 2018-09-28 14:55:00 +0000
+# Generation Time: 2018-09-28 14:56:43 +0000
 # ************************************************************
 
 
@@ -41,6 +41,31 @@ VALUES
 	(1,'title_statement','home','sarnies for life ');
 
 /*!40000 ALTER TABLE `about_me` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table portfolio
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `portfolio`;
+
+CREATE TABLE `portfolio` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `project name` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `project_url` varchar(255) DEFAULT NULL,
+  `visibility` int(11) DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `portfolio` WRITE;
+/*!40000 ALTER TABLE `portfolio` DISABLE KEYS */;
+
+INSERT INTO `portfolio` (`id`, `project name`, `image`, `project_url`, `visibility`)
+VALUES
+	(1,'pilot','plane.png',NULL,1);
+
+/*!40000 ALTER TABLE `portfolio` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
