@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio
-# Generation Time: 2018-09-28 15:19:43 +0000
+# Generation Time: 2018-09-28 15:24:24 +0000
 # ************************************************************
 
 
@@ -52,7 +52,7 @@ CREATE TABLE `portfolio` (
   `project_name` varchar(255) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `project_url` varchar(255) DEFAULT NULL,
-  `delete` tinyint(11) DEFAULT '1',
+  `delete` tinyint(1) unsigned DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
