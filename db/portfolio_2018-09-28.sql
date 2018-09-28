@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio
-# Generation Time: 2018-09-28 14:56:43 +0000
+# Generation Time: 2018-09-28 15:19:43 +0000
 # ************************************************************
 
 
@@ -27,18 +27,16 @@ DROP TABLE IF EXISTS `about_me`;
 
 CREATE TABLE `about_me` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(20) DEFAULT NULL,
-  `location` varchar(255) DEFAULT NULL,
-  `content` varchar(255) DEFAULT NULL,
+  `content` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `about_me` WRITE;
 /*!40000 ALTER TABLE `about_me` DISABLE KEYS */;
 
-INSERT INTO `about_me` (`id`, `title`, `location`, `content`)
+INSERT INTO `about_me` (`id`, `content`)
 VALUES
-	(1,'title_statement','home','sarnies for life ');
+	(1,'sarnies for life ');
 
 /*!40000 ALTER TABLE `about_me` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -51,19 +49,19 @@ DROP TABLE IF EXISTS `portfolio`;
 
 CREATE TABLE `portfolio` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `project name` varchar(255) DEFAULT NULL,
+  `project_name` varchar(255) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `project_url` varchar(255) DEFAULT NULL,
-  `visibility` int(11) DEFAULT '1',
+  `delete` tinyint(11) DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `portfolio` WRITE;
 /*!40000 ALTER TABLE `portfolio` DISABLE KEYS */;
 
-INSERT INTO `portfolio` (`id`, `project name`, `image`, `project_url`, `visibility`)
+INSERT INTO `portfolio` (`id`, `project_name`, `image`, `project_url`, `delete`)
 VALUES
-	(1,'pilot','plane.png',NULL,1);
+	(1,'project 1','plane.png',NULL,1);
 
 /*!40000 ALTER TABLE `portfolio` ENABLE KEYS */;
 UNLOCK TABLES;
