@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio
-# Generation Time: 2018-09-28 14:26:23 +0000
+# Generation Time: 2018-09-28 14:31:31 +0000
 # ************************************************************
 
 
@@ -28,7 +28,7 @@ DROP TABLE IF EXISTS `about_me`;
 CREATE TABLE `about_me` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(20) DEFAULT NULL,
-  `location` int(11) DEFAULT NULL,
+  `location` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -37,7 +37,7 @@ LOCK TABLES `about_me` WRITE;
 
 INSERT INTO `about_me` (`id`, `title`, `location`)
 VALUES
-	(1,'title_statement',NULL);
+	(1,'title_statement','home');
 
 /*!40000 ALTER TABLE `about_me` ENABLE KEYS */;
 UNLOCK TABLES;
