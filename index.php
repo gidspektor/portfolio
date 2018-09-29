@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,6 +36,9 @@
             <p>My journey as a developer started a year ago when I first started trying to use Javascript to create small games, that were full of bugs but none the less I found my interest in development.
             </p>
             <p>I’m now a trainee web developer at Mayden Academy and after my 16 week journey here I would like to go into web development.
+            </p>
+            <p><?php require 'pull_data.php';
+                echo $final_output; ?>
             </p>
             <p>I want to create cool, clean and creative websites; as I believe simplicity is key to a good user experience. </p>
         </div>
