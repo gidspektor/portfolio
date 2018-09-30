@@ -1,4 +1,5 @@
 
+<?php require 'pull_data.php';?>
 
 <html lang="en">
 <head>
@@ -37,8 +38,8 @@
             </p>
             <p>I’m now a trainee web developer at Mayden Academy and after my 16 week journey here I would like to go into web development.
             </p>
-            <p><?php require 'pull_data.php';
-                echo $final_output; ?>
+            <p>
+                <?php echo $about_output; ?>
             </p>
             <p>I want to create cool, clean and creative websites; as I believe simplicity is key to a good user experience. </p>
         </div>
@@ -47,6 +48,7 @@
         <div class="showcase">
             <div class="cards">
                 <div class="projOne">
+                    <?php echo $portfolio_output; ?>
                 </div>
                 Project one
             </div>
