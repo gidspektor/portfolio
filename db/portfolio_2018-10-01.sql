@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio
-# Generation Time: 2018-09-28 15:24:24 +0000
+# Generation Time: 2018-10-01 10:41:43 +0000
 # ************************************************************
 
 
@@ -36,7 +36,7 @@ LOCK TABLES `about_me` WRITE;
 
 INSERT INTO `about_me` (`id`, `content`)
 VALUES
-	(1,'sarnies for life ');
+	(1,'Also sarnies are life.');
 
 /*!40000 ALTER TABLE `about_me` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -61,7 +61,7 @@ LOCK TABLES `portfolio` WRITE;
 
 INSERT INTO `portfolio` (`id`, `project_name`, `image`, `project_url`, `delete`)
 VALUES
-	(1,'project 1','plane.png',NULL,1);
+	(1,'project1','cowboy.png','peanutbutter.com',1);
 
 /*!40000 ALTER TABLE `portfolio` ENABLE KEYS */;
 UNLOCK TABLES;
