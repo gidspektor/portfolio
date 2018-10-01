@@ -39,7 +39,7 @@
             <p>I’m now a trainee web developer at Mayden Academy and after my 16 week journey here I would like to go into web development.
             </p>
             <p>
-            <p> <?php about_output(1,$db); ?></p>
+            <?php echo about_output($db); ?>
             </p>
             <p>I want to create cool, clean and creative websites; as I believe simplicity is key to a good user experience. </p>
         </div>
@@ -48,7 +48,7 @@
         <div class="showcase">
             <div class="cards">
                 <div class="projOne">
-                    <?php portfolio_output($db,'project1');?>
+<!--                    --><?php //portfolio_output($db,'project1');?>
                 </div>
                 Project one
             </div>
