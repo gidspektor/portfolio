@@ -1,9 +1,15 @@
 <?php
 
 
-$db = new PDO($db = new PDO('mysql:host=127.0.0.1;dbname=portfolio', 'root');
+$db = new PDO('mysql:host=127.0.0.1;dbname=portfolio', 'root');
 
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
+
+
+
+
+
+
 
 function about_output($id,$db)
 {
@@ -12,6 +18,12 @@ function about_output($id,$db)
     $about_result=$about_query->fetchAll();
     return $about_result['content'];
 }
+
+
+
+
+
+
 
 
 function portfolio_output($db,$project_name) {
@@ -23,4 +35,3 @@ function portfolio_output($db,$project_name) {
         return $result['image'].$result['project_url'];
     }
 }
-
