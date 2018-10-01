@@ -34,14 +34,9 @@
         <div class="me">
             <h1>About Me</h1>
             <p>Hi I’m Gideon.</p>
-            <p>My journey as a developer started a year ago when I first started trying to use Javascript to create small games, that were full of bugs but none the less I found my interest in development.
-            </p>
-            <p>I’m now a trainee web developer at Mayden Academy and after my 16 week journey here I would like to go into web development.
-            </p>
-            <p>
-            <?php echo $final_about ?>
-            </p>
-            <p>I want to create cool, clean and creative websites; as I believe simplicity is key to a good user experience. </p>
+            <p><?php echo $bio;?></p>
+            <p><?php echo $life_now;?></p>
+            <p><?php echo $goals;?></p>
         </div>
     </section>
     <section id="project" class="pageThree">

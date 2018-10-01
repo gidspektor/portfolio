@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio
-# Generation Time: 2018-10-01 10:41:43 +0000
+# Generation Time: 2018-10-01 15:34:08 +0000
 # ************************************************************
 
 
@@ -27,16 +27,18 @@ DROP TABLE IF EXISTS `about_me`;
 
 CREATE TABLE `about_me` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `content` varchar(1000) DEFAULT NULL,
+  `bio` varchar(1000) DEFAULT NULL,
+  `life_now` varchar(1000) DEFAULT NULL,
+  `goals` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `about_me` WRITE;
 /*!40000 ALTER TABLE `about_me` DISABLE KEYS */;
 
-INSERT INTO `about_me` (`id`, `content`)
+INSERT INTO `about_me` (`id`, `bio`, `life_now`, `goals`)
 VALUES
-	(1,'Also sarnies are life.');
+	(1,'My journey as a developer started a year ago when I first started trying to use Javascript to create small games, that were full of bugs but none the less I found my interest in development.','I\'m now a trainee web developer at Mayden Academy and after my 16 week journey here I would like to go into web development.','I want to create cool, clean and creative websites; as I believe simplicity is key to a good user experience.');
 
 /*!40000 ALTER TABLE `about_me` ENABLE KEYS */;
 UNLOCK TABLES;
