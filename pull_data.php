@@ -6,18 +6,35 @@ $db = new PDO('mysql:host=127.0.0.1;dbname=portfolio', 'root');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
 
 
-
-
-function about_output($db)
+function about_output(pdo $db) :array
 {
     $query=$db->prepare("SELECT `content` FROM `about_me`");
     $query->execute();
-    $about_result = $query->fetchAll();
+    return $about_result = $query->fetchAll();
+}
+$about_result=about_output($db);
+
+var_dump($about_result);
+
+
+/*
+ * takes array and turns it into a single key value
+ *
+ * @$param :array this is an array of fields from the about_me section of the db
+ *
+ *
+ * @return :string a key value from the content field
+ */
+function choose_data(array $about_result) :string
+{
     foreach ($about_result as $result) {
         return $result['content'];
     }
-
 }
+$final_about=choose_data($about_result);
+
+
+
 
 
 
