@@ -42,32 +42,37 @@
         <div class="showcase">
             <div class="cards">
                 <div class="projOne">
-<!--                    --><?php //portfolio_output($db,'project1');?>
+                    <a href="echo <?php echo $proj1;?>">Project 1</a>
                 </div>
                 Project one
             </div>
             <div class="cards">
                 <div class="projOne">
+                    <a href="echo <?php echo $proj2;?>">Project 2</a>
                  </div>
                  Project two
             </div>
           <div class="cards">
                 <div class="projOne">
+                    <a href="echo <?php echo $proj3;?>">Project 3</a>
                 </div>
                 Project three
           </div>
             <div class="cards">
                 <div class="projOne">
+                    <a href="echo <?php echo $proj4;?>">Project 4</a>
                 </div>
                 Project four
             </div>
             <div class="cards">
                 <div class="projOne">
+                    <a href="echo <?php echo $proj5;?>">Project 5</a>
                 </div>
                 Project five
             </div>
             <div class="cards">
                 <div class="projOne">
+                    <a href="echo <?php echo $proj6;?>">Project 6</a>
                 </div>
                 Project six
             </div>

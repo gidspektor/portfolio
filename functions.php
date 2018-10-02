@@ -74,8 +74,6 @@ function output_life(array $about_result) :string {
     } else {
         return 'false';
     }
-
-
 }
 
 /*
@@ -93,3 +91,39 @@ function output_goals(array $about_result) :string {
     }
 }
 
+/*
+ * takes a db and a string value variable and outputs an array
+ *
+ * @param this is a db and the second is a string
+ *
+ * @returns an array based on the string name given to it
+ */
+function portfolio_output(pdo $db, string $project_name) :array
+{
+    $portfolio_query = $db->prepare("SELECT `image`,`project_url` FROM `portfolio` WHERE `project_name` = :project;");
+    $portfolio_query->bindParam(':project',$project_name);
+    $portfolio_query->execute();
+    return $portfolio_result = $portfolio_query->fetchAll();
+}
+
+/*
+ * takes an array and outputs individual values
+ *
+ * @param this is an array
+ *
+ * @returns two values from the array based on the key values called
+ */
+function grab_result($portfolio_result)
+{
+    foreach ($portfolio_result as $result) {
+        return $result['image'] . $result['project_url'];
+    }
+}
+
+function push_project(string $proj1_img,$proj1_url,$name,pdo $db) :int {
+    $query=$db->prepare("UPDATE `portfolio` SET `image`= :image,`project_url` = :project_url WHERE `project_name` = ':name' ;");
+    $query->bindParam(':bio',$bio);
+    $query->bindParam(':life_now',$life_now);
+    $query->bindParam(':goals',$goals);
+    return $query->execute();
+}
