@@ -2,18 +2,20 @@
 require 'pull_data.php';
 ?>
 
+<link rel="stylesheet" href="form.css" type="text/css">
 
-
-<h1>Enter new information</h1>
-<form action="push_data.php" method="post">
+<main>
+    <h1>Enter new information</h1>
     <h3>edit bio</h3>
-    <input type="text" name="bio" value="<?php echo $bio;?>">
+    <textarea class="text_box" name="bio" form="text"> "<?php echo $bio;?>"</textarea>
     <h3>edit life now</h3>
-    <input type="text" name="life_now" value="<?php echo $life_now;?>"/>
+    <textarea class="text_box" name="life_now" form="text"> "<?php echo $life_now;?>"</textarea>
     <h3>edit goals</h3>
-    <input type="text" name="goals" value="<?php echo $goals;?>"/>
-    <input type="submit"/>
-</form>
+    <textarea class="text_box" name="goals" form="text"> "<?php echo $goals;?>"</textarea>
 
+    <form action="push_data.php" method="post" id="text">
+     <input type="submit"/>
+    </form>
+</main>
 
 
