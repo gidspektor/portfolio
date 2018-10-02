@@ -17,6 +17,14 @@ class StackTest extends TestCase
         $this->assertEquals($case, $expected);
     }
 
+    public function testOutput_biofail()
+    {
+        $expected ='false';
+        $arrayResults = ["poop"=>"Also sarnies are life."];
+        $case = output_bio($arrayResults);
+        $this->assertEquals($case, $expected);
+    }
+
     public function testOutput_life()
     {
         $expected = "Also sarnies are life.";
@@ -25,7 +33,6 @@ class StackTest extends TestCase
         $this->assertEquals($case, $expected);
     }
 
-
     public function testOutput_goals()
     {
         $expected = "Also sarnies are life.";
@@ -33,6 +40,13 @@ class StackTest extends TestCase
         $case = output_goals($arrayResults);
         $this->assertEquals($case, $expected);
     }
-}
 
+    public function testnull_pull()
+    {
+        $expected = "false";
+        $arrayResults = [];
+        $case = null_pull($arrayResults);
+        $this->assertEquals($case, $expected);
+    }
+}
 
