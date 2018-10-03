@@ -114,6 +114,7 @@ function portfolio_output(pdo $db) :array
 // */
 function grab_result(array $portfolio_result) :string
 {
+
 //    switch($portfolio_result) {
 //        case array_key_exists('image',$portfolio_result):
 //        case array_key_exists('project_url',$portfolio_result):
@@ -146,5 +147,19 @@ function push_project(string $proj_img,$proj_url,$name,pdo $db) {
     $query->bindParam(':image',$proj_img);
     $query->bindParam(':project_url',$proj_url);
     $query->bindParam(':name',$name);
+    return $query->execute();
+}
+
+/*
+ * takes the inputted string and db and then turns delete column number to 1 dependent on string name given
+ *
+ * @param these are the strings that have been inputted on the form and the db
+ *
+ * @returns a value of 1 to one of the fields
+ *
+ */
+function delete_proj(string $proj_delete, pdo $db) :int {
+    $query=$db->prepare("UPDATE `portfolio` SET `delete` = 1 WHERE `project_name` = :name;");
+    $query->bindParam(':name',$proj_delete);
     return $query->execute();
 }

@@ -7,7 +7,9 @@ $proj_img = $_POST['proj_img'];
 $proj_url = $_POST['proj_url'];
 $proj_name = $_POST['proj_name'];
 
+$proj_delete = $_POST['proj_delete'];
 
+delete_proj($proj_delete,$db);
 push_project($proj_img,$proj_url,$proj_name,$db);
 ?>
 
