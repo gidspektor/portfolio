@@ -98,32 +98,50 @@ function output_goals(array $about_result) :string {
  *
  * @returns an array based on the string name given to it
  */
-function portfolio_output(pdo $db, string $project_name) :array
+function portfolio_output(pdo $db) :array
 {
-    $portfolio_query = $db->prepare("SELECT `image`,`project_url` FROM `portfolio` WHERE `project_name` = :project;");
-    $portfolio_query->bindParam(':project',$project_name);
+    $portfolio_query = $db->prepare("SELECT `project_name`, `image`,`project_url`, `id` FROM `portfolio`;");
     $portfolio_query->execute();
     return $portfolio_result = $portfolio_query->fetchAll();
 }
 
-/*
- * takes an array and outputs individual values
- *
- * @param this is an array
- *
- * @returns two values from the array based on the key values called
- */
+///*
+// * takes an array and checks if it is an array and then turns the array into individual items from the key fields
+// *
+// * @param this is an array
+// *
+// * @returns false if not an array or it returns all the values of the array from the specified key items
+// */
 function grab_result($portfolio_result)
 {
-    foreach ($portfolio_result as $result) {
-        return $result['image'] . $result['project_url'];
+    if (is_array($portfolio_result)) {
+        $result = '';
+        foreach ($portfolio_result as $row) {
+            $result .= '<div class="cards">
+                    <div class="proj"  style="background-image: url(\'' . $row['image'] . '\');">' .
+                '<a href=' . $row['url'] . '>' . $row['project_name'] . '</a>
+                    </div>'
+                . $row['project_name'] .
+                '</div>';
+        }
+        return $result;
+    }
+    else{ return 'false';
     }
 }
 
-function push_project(string $proj1_img,$proj1_url,$name,pdo $db) :int {
+/*
+ * takes the inputted strings from each field and pushes it to the database
+ *
+ * @param these are the strings that have been inputted on the form
+ *
+ * @returns 3 values
+ *
+ */
+function push_project(string $proj_img,$proj_url,$name,pdo $db) :int {
     $query=$db->prepare("UPDATE `portfolio` SET `image`= :image,`project_url` = :project_url WHERE `project_name` = ':name' ;");
-    $query->bindParam(':bio',$bio);
-    $query->bindParam(':life_now',$life_now);
-    $query->bindParam(':goals',$goals);
+    $query->bindParam(':image',$proj_img);
+    $query->bindParam(':project_url',$proj_url);
+    $query->bindParam(':name',$name);
     return $query->execute();
 }
