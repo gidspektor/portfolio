@@ -106,14 +106,21 @@ function portfolio_output(pdo $db) :array
 }
 
 ///*
-// * takes an array and checks if it is an array and then turns the array into individual items from the key fields
+// * takes an array and then turns the array into individual items from the key fields which are added together
 // *
 // * @param this is an array
 // *
-// * @returns false if not an array or it returns all the values of the array from the specified key items
+// * @returns  all the values of the array from the specified key items, inside of a html element. it is disgusting
 // */
-function grab_result($portfolio_result)
+function grab_result(array $portfolio_result) :string
 {
+//    switch($portfolio_result) {
+//        case array_key_exists('image',$portfolio_result):
+//        case array_key_exists('project_url',$portfolio_result):
+//        case array_key_exists('project_name',$portfolio_result):
+//            return $portfolio_result['project_url'] . $portfolio_result['image'] . $portfolio_result['project_name'];
+//        default: return 'false';
+//    }
         $result = '';
         foreach ($portfolio_result as $row) {
             $result .= '<div class="cards">
