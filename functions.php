@@ -100,7 +100,7 @@ function output_goals(array $about_result) :string {
  */
 function portfolio_output(pdo $db) :array
 {
-    $portfolio_query = $db->prepare("SELECT `project_name`, `image`,`project_url`, `id` FROM `portfolio`;");
+    $portfolio_query = $db->prepare("SELECT `project_name`, `image`,`project_url`, `id` FROM `portfolio` WHERE `delete` = 0;");
     $portfolio_query->execute();
     return $portfolio_result = $portfolio_query->fetchAll();
 }
@@ -114,20 +114,16 @@ function portfolio_output(pdo $db) :array
 // */
 function grab_result($portfolio_result)
 {
-    if (is_array($portfolio_result)) {
         $result = '';
         foreach ($portfolio_result as $row) {
             $result .= '<div class="cards">
                     <div class="proj"  style="background-image: url(\'' . $row['image'] . '\');">' .
-                '<a href=' . $row['url'] . '>' . $row['project_name'] . '</a>
+                '<a href=' . $row['project_url'] . '>' . $row['project_name'] . '</a>
                     </div>'
                 . $row['project_name'] .
                 '</div>';
         }
         return $result;
-    }
-    else{ return 'false';
-    }
 }
 
 /*
@@ -138,8 +134,8 @@ function grab_result($portfolio_result)
  * @returns 3 values
  *
  */
-function push_project(string $proj_img,$proj_url,$name,pdo $db) :int {
-    $query=$db->prepare("UPDATE `portfolio` SET `image`= :image,`project_url` = :project_url WHERE `project_name` = ':name' ;");
+function push_project(string $proj_img,$proj_url,$name,pdo $db) {
+    $query=$db->prepare("INSERT INTO `portfolio` (`project_name`, `image`,`project_url`, `delete`)VALUES (:name, :image, :project_url, 0);");
     $query->bindParam(':image',$proj_img);
     $query->bindParam(':project_url',$proj_url);
     $query->bindParam(':name',$name);
