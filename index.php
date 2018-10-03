@@ -1,5 +1,6 @@
-
-<?php require 'pull_data.php';?>
+<?php
+require 'pull_data.php';
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,37 +41,10 @@
     </section>
     <section id="project" class="pageThree">
         <div class="showcase">
-            <div class="cards">
-                <div class="projOne">
-<!--                    --><?php //portfolio_output($db,'project1');?>
-                </div>
-                Project one
+             <div class="cards">
+                 <?php echo $proj?>
             </div>
-            <div class="cards">
-                <div class="projOne">
-                 </div>
-                 Project two
-            </div>
-          <div class="cards">
-                <div class="projOne">
-                </div>
-                Project three
-          </div>
-            <div class="cards">
-                <div class="projOne">
-                </div>
-                Project four
-            </div>
-            <div class="cards">
-                <div class="projOne">
-                </div>
-                Project five
-            </div>
-            <div class="cards">
-                <div class="projOne">
-                </div>
-                Project six
-            </div>
+        </div>
         </div>
     </section>
     <section id="contact" class="pageFour">

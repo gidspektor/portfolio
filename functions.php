@@ -74,8 +74,6 @@ function output_life(array $about_result) :string {
     } else {
         return 'false';
     }
-
-
 }
 
 /*
@@ -93,3 +91,60 @@ function output_goals(array $about_result) :string {
     }
 }
 
+/*
+ * takes a db and a string value variable and outputs an array
+ *
+ * @param this is a db and the second is a string
+ *
+ * @returns an array based on the string name given to it
+ */
+function portfolio_output(pdo $db) :array
+{
+    $portfolio_query = $db->prepare("SELECT `project_name`, `image`,`project_url`, `id` FROM `portfolio` WHERE `delete` = 0;");
+    $portfolio_query->execute();
+    return $portfolio_result = $portfolio_query->fetchAll();
+}
+
+///*
+// * takes an array and then turns the array into individual items from the key fields which are added together
+// *
+// * @param this is an array
+// *
+// * @returns  all the values of the array from the specified key items, inside of a html element. it is disgusting
+// */
+function grab_result(array $portfolio_result) :string
+{
+//    switch($portfolio_result) {
+//        case array_key_exists('image',$portfolio_result):
+//        case array_key_exists('project_url',$portfolio_result):
+//        case array_key_exists('project_name',$portfolio_result):
+//            return $portfolio_result['project_url'] . $portfolio_result['image'] . $portfolio_result['project_name'];
+//        default: return 'false';
+//    }
+        $result = '';
+        foreach ($portfolio_result as $row) {
+            $result .= '<div class="cards">
+                    <div class="proj"  style="background-image: url(\'' . $row['image'] . '\');">' .
+                '<a href=' . $row['project_url'] . '>' . $row['project_name'] . '</a>
+                    </div>'
+                . $row['project_name'] .
+                '</div>';
+        }
+        return $result;
+}
+
+/*
+ * takes the inputted strings from each field and pushes it to the database
+ *
+ * @param these are the strings that have been inputted on the form
+ *
+ * @returns 3 values
+ *
+ */
+function push_project(string $proj_img,$proj_url,$name,pdo $db) {
+    $query=$db->prepare("INSERT INTO `portfolio` (`project_name`, `image`,`project_url`, `delete`)VALUES (:name, :image, :project_url, 0);");
+    $query->bindParam(':image',$proj_img);
+    $query->bindParam(':project_url',$proj_url);
+    $query->bindParam(':name',$name);
+    return $query->execute();
+}

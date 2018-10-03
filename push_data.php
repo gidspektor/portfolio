@@ -7,8 +7,6 @@ $bio_push = $_POST['bio'];
 $life_now_push = $_POST['life_now'];
 $goals_push = $_POST['goals'];
 
-
-
 push_data($bio_push,$life_now_push,$goals_push,$db);
 
 ?>

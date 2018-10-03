@@ -4,7 +4,7 @@ body {
 }
 
 main {
-    height: 900px;
+    height: 2000px;
     width: 500px;
     background-color: aqua;
     margin: 0 auto;
@@ -16,3 +16,5 @@ textarea {
     height: 200px;
     width: 300px
 }
+
+
