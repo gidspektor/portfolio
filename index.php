@@ -41,9 +41,7 @@ require 'pull_data.php';
     </section>
     <section id="project" class="pageThree">
         <div class="showcase">
-             <div class="cards">
                  <?php echo $proj?>
-            </div>
         </div>
         </div>
     </section>
@@ -57,6 +55,7 @@ require 'pull_data.php';
                 <a href="https://www.linkedin.com/in/gideon-spektor-33abb4163"><img src="images/linkd.png" alt="linked in icon"/></a>
                 <a href="https://github.com/gidspektor" target="_top"><img src="images/git.png" alt="github icon"/></a>
             </div>
+        <a href="login.php">Login</a>
     </section>
 </body>
 </html>

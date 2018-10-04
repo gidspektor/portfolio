@@ -19,7 +19,7 @@ require 'pull_data.php';
 
         <h3>delete a project</h3>
      <select name="proj_delete">
-         <option></option>
+         <option disabled="disabled"></option>
          <option>project1</option>
          <option>project2</option>
          <option>project3</option>
@@ -31,9 +31,7 @@ require 'pull_data.php';
 
 <section id="project" class="pageThree">
     <div class="showcase">
-        <div class="cards">
             <?php echo $proj?>
-        </div>
     </div>
     </div>
 </section>
