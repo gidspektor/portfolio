@@ -8,6 +8,10 @@ $proj_img = $_POST['proj_img'];
 $proj_url = $_POST['proj_url'];
 $proj_name = $_POST['proj_name'];
 
+if(empty($proj_img) || empty($proj_url) || empty($proj_name)) {
+    exit('incomplete form');
+}
+
 
 push_project($proj_img,$proj_url,$proj_name,$db);
 ?>

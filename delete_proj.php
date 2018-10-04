@@ -8,6 +8,9 @@ $db = db_conn();
 
 $proj_delete = $_POST['proj_delete'];
 
+if(empty($proj_delete)) {
+    exit('incomplete form');
+}
 
 delete_proj($proj_delete,$db);
 
