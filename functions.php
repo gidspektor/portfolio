@@ -170,13 +170,10 @@ function delete_proj(string $proj_delete, pdo $db) :int {
  */
 function check_input($entered_user_name, $correct_user, $entered_password, $correct_pass)
 {
-      if ($entered_user_name === $correct_user && $entered_password === $correct_pass) {
-            return $entered_user_name && $entered_password;
-    } elseif ($entered_user_name === $correct_user && $entered_password != $correct_pass) {
-        echo 'not valid';
-    } elseif ($entered_user_name != $correct_user && $entered_password === $correct_pass) {
-        echo 'not valid';
+      if ($entered_user_name === $correct_user && password_verify($entered_password,'$2y$10$vPNaFE.lcHQwUKkHUPKao.zPceu1EGm59pg7rfmUkC7WajgLO8J46')) {
+          $_SESSION['login'] = true;
+          return true ;
     } else {
-        echo'no no no';
+        echo false;
     }
 };

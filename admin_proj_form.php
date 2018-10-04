@@ -1,5 +1,14 @@
 <?php
+
+session_start();
 require 'pull_data.php';
+
+if(!isset($_SESSION['login'])) {
+    header('location: login.php');
+    exit();
+}
+
+
 
 ?>
 

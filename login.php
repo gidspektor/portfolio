@@ -1,13 +1,5 @@
 <?php
 
-session_start();
-if (password_verify($_POST['password'], '$hash') && ($_POST['username']) === ) {
-    $_SESSION['admin'] = 'loggedIn';
-    header('Location: dashboard.php');
-}
-else {
-    header('Location: login.php?error=01');
-}
 
 
 
