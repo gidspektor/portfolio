@@ -1,6 +1,5 @@
 <?php
 
-
 use PHPunit\Framework\Testcase;
 
 require '../functions.php';
