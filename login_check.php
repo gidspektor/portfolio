@@ -12,9 +12,9 @@ $correct_user = 'fangyuan';
 
 check_input($entered_user_name,$correct_user,$entered_password,$correct_pass);
 
-
-
 ?>
+
+
 
 <html>
 <a href="form.php"><h3>click here to edit bio</h3></a>
