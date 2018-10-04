@@ -139,7 +139,7 @@ function grab_result(array $portfolio_result) :string
  *
  */
 function push_project(string $proj_img,$proj_url,$name,pdo $db) {
-    $query=$db->prepare("INSERT INTO `portfolio` (`project_name`, `image`,`project_url`, `delete`)VALUES (:name, :image, :project_url, 1);");
+    $query=$db->prepare("INSERT INTO `portfolio` (`project_name`, `image`,`project_url`, `delete`)VALUES (:name, :image, :project_url, 0);");
     $query->bindParam(':image',$proj_img);
     $query->bindParam(':project_url',$proj_url);
     $query->bindParam(':name',$name);

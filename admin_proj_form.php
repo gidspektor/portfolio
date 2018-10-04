@@ -10,7 +10,7 @@ require 'pull_data.php';
 </head>
 
 <form action="push_proj.php" method="post" id="text">
-<h3>Insert a new project name</h3>
+<h3>Insert a new project name in the format of (project1)</h3>
         <input type="text" name="proj_name" />
          <h3>Insert a new image for project 1</h3>
          <input type="text" name="proj_img" />
@@ -31,6 +31,10 @@ require 'pull_data.php';
          <option>project4</option>
          <option>project5</option>
          <option>project6</option>
+         <option>project7</option>
+         <option>project8</option>
+         <option>project9</option>
+         <option>project10</option>
      </select>
     <input type="submit"/>
 </form>
