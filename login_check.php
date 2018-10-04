@@ -12,7 +12,6 @@ $entered_password = $_POST['password'];
 $correct_pass = 'qingjin1';
 $correct_user = 'fangyuan';
 
-echo password_hash($correct_pass);
 
 check_input($entered_user_name,$correct_user,$entered_password,$correct_pass);
 
