@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    font-weight: bold;
+}
+
+main {
+    height: 2000px;
+    width: 500px;
+    background-color: aqua;
+    margin: 0 auto;
+}
+
+textarea {
+    text-align: center;
+    overflow: hidden;
+    height: 200px;
+    width: 300px
+}
+
+
