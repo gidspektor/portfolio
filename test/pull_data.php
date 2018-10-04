@@ -96,7 +96,7 @@ class StackTest extends TestCase
 
     public function testcheck_input()
     {
-        $expected = 'i like potatoes i like potatoes';
+        $expected = '1';
         $entered_user_name = 'i like potatoes';
         $entered_password = 'i love potatoes';
         $correct_user = 'i like potatoes';
@@ -107,9 +107,9 @@ class StackTest extends TestCase
 
     public function testcheck_inputfail()
     {
-        $expected = 'false';
-        $entered_user_name = 'i love poo';
-        $entered_password = 'i like potatoes';
+        $expected = '';
+        $entered_user_name = 'i love potatoes';
+        $entered_password = 'i like poo';
         $correct_user = 'i love potatoes';
         $correct_pass = 'i like potatoes';
         $case = check_input($entered_user_name, $correct_user, $entered_password, $correct_pass);

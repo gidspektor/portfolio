@@ -168,15 +168,15 @@ function delete_proj(string $proj_delete, pdo $db) :int {
  * @returns the inputted strings if they match the stored values but if not it returns false
  *
  */
-//function check_input(string $entered_user_name, $correct_user, $entered_password, $correct_pass) :string
-//////{
-//////      if ($entered_user_name === $correct_user && $entered_password === $correct_pass) {
-//////            return
-//////    } elseif ($entered_user_name === $correct_user && $entered_password != $correct_pass) {
-//////        echo 'not valid';
-//////    } elseif ($entered_user_name != $correct_user && $entered_password === $correct_pass) {
-//////        echo 'not valid';
-//////    } else {
-//////        echo'no no no';
-//////    }
-//////};
+function check_input($entered_user_name, $correct_user, $entered_password, $correct_pass)
+{
+      if ($entered_user_name === $correct_user && $entered_password === $correct_pass) {
+            return $entered_user_name && $entered_password;
+    } elseif ($entered_user_name === $correct_user && $entered_password != $correct_pass) {
+        echo 'not valid';
+    } elseif ($entered_user_name != $correct_user && $entered_password === $correct_pass) {
+        echo 'not valid';
+    } else {
+        echo'no no no';
+    }
+};
