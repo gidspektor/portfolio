@@ -19,7 +19,7 @@ require 'pull_data.php';
 
         <h3>delete a project</h3>
      <select name="proj_delete">
-         <option disabled="disabled"></option>
+         <option value="0">dont delete any</option>
          <option>project1</option>
          <option>project2</option>
          <option>project3</option>

@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.41)
 # Database: portfolio
-# Generation Time: 2018-10-04 11:15:19 +0000
+# Generation Time: 2018-10-04 14:25:46 +0000
 # ************************************************************
 
 
@@ -27,9 +27,9 @@ DROP TABLE IF EXISTS `about_me`;
 
 CREATE TABLE `about_me` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `bio` varchar(1000) DEFAULT NULL,
-  `life_now` varchar(1000) DEFAULT NULL,
-  `goals` varchar(1000) DEFAULT NULL,
+  `bio` varchar(1000) NOT NULL DEFAULT '',
+  `life_now` varchar(1000) NOT NULL DEFAULT '',
+  `goals` varchar(1000) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -51,10 +51,10 @@ DROP TABLE IF EXISTS `portfolio`;
 
 CREATE TABLE `portfolio` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `project_name` varchar(255) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  `project_url` varchar(255) DEFAULT NULL,
-  `delete` tinyint(1) unsigned DEFAULT '1',
+  `project_name` varchar(255) NOT NULL DEFAULT '',
+  `image` varchar(255) NOT NULL DEFAULT '',
+  `project_url` varchar(255) NOT NULL DEFAULT '',
+  `delete` tinyint(1) unsigned NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

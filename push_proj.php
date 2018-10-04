@@ -1,6 +1,6 @@
 <?php
-require 'functions.php';
-require 'db.php';
+require_once'functions.php';
+require_once 'db.php';
 
 $db = db_conn();
 
@@ -9,6 +9,7 @@ $proj_url = $_POST['proj_url'];
 $proj_name = $_POST['proj_name'];
 
 $proj_delete = $_POST['proj_delete'];
+
 
 delete_proj($proj_delete,$db);
 
