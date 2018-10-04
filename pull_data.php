@@ -12,7 +12,7 @@ $sanitised_output = null_pull($about_result);
 $portfolio_result = portfolio_output($db);
 
 
-$proj=grab_result($portfolio_result);
+$proj = grab_result($portfolio_result);
 
 $bio = output_bio($sanitised_output);
 $life_now = output_life($sanitised_output);
