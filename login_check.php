@@ -11,7 +11,6 @@ require 'functions.php';
 $entered_user_name = $_POST['username'];
 $entered_password = $_POST['password'];
 
-$correct_pass = 'qingjin1';
 $correct_user = 'fangyuan';
 
 $status = check_input($entered_user_name,$correct_user,$entered_password);
