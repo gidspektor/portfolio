@@ -168,7 +168,7 @@ function delete_proj(string $proj_delete, pdo $db) :int {
  * @returns the inputted strings if they match the stored values but if not it returns false
  *
  */
-function check_input($entered_user_name, $correct_user, $entered_password, $correct_pass)
+function check_input($entered_user_name, $correct_user, $entered_password)
 {
       if ($entered_user_name === $correct_user && password_verify($entered_password,'$2y$10$vPNaFE.lcHQwUKkHUPKao.zPceu1EGm59pg7rfmUkC7WajgLO8J46')) {
           $_SESSION['login'] = true;

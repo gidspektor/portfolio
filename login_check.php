@@ -14,7 +14,7 @@ $entered_password = $_POST['password'];
 $correct_pass = 'qingjin1';
 $correct_user = 'fangyuan';
 
-$status = check_input($entered_user_name,$correct_user,$entered_password,$correct_pass);
+$status = check_input($entered_user_name,$correct_user,$entered_password);
 
 if ($status) {
     echo 'logged in';
