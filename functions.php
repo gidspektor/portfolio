@@ -159,3 +159,24 @@ function delete_proj(string $proj_delete, pdo $db) :int {
     $query->bindParam(':name',$proj_delete);
     return $query->execute();
 }
+
+/*
+ * this takes multiple strings and make sure they match other strings and do not contain certain symbols
+ *
+ * @param this is an entered string of information from a form and a string of information with predefined values
+ *
+ * @returns the inputted strings if they match the stored values but if not it returns false
+ *
+ */
+function check_input(string $entered_user_name, $correct_user, $entered_password, $correct_pass) :string
+{
+      if ($entered_user_name === $correct_user && $entered_password === $correct_pass) {
+            return 
+    } elseif ($entered_user_name === $correct_user && $entered_password != $correct_pass) {
+        echo 'not valid';
+    } elseif ($entered_user_name != $correct_user && $entered_password === $correct_pass) {
+        echo 'not valid';
+    } else {
+        echo'no no no';
+    }
+};
