@@ -16,7 +16,12 @@ require 'pull_data.php';
          <input type="text" name="proj_img" />
          <h3>Insert a new url for project 1</h3>
          <input type="text" name="proj_url" /><br>
+         <input type="submit"/>
+</form>
 
+
+
+<form action="delete_proj.php" method="post" id="text">
         <h3>delete a project</h3>
      <select name="proj_delete">
          <option value="0">dont delete any</option>
@@ -27,7 +32,8 @@ require 'pull_data.php';
          <option>project5</option>
          <option>project6</option>
      </select>
-
+    <input type="submit"/>
+</form>
 
 <section id="project" class="pageThree">
     <div class="showcase">
@@ -37,5 +43,4 @@ require 'pull_data.php';
 </section>
 
 
-    <input type="submit"/>
-</form>
+
