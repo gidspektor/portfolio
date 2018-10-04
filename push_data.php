@@ -1,7 +1,8 @@
 <?php
 require 'functions.php';
+require 'db.php';
 
-$db = new PDO('mysql:host=127.0.0.1;dbname=portfolio', 'root');
+$db = db_conn();
 
 $bio_push = $_POST['bio'];
 $life_now_push = $_POST['life_now'];

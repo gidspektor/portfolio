@@ -1,10 +1,10 @@
 <?php
 
 require 'functions.php';
+require 'db.php';
 
-$db = new PDO('mysql:host=127.0.0.1;dbname=portfolio', 'root');
+$db = db_conn();
 
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
 
 $about_result=about_output($db);
 $sanitised_output = null_pull($about_result);
