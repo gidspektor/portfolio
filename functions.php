@@ -114,23 +114,20 @@ function portfolio_output(pdo $db) :array
 // */
 function grab_result(array $portfolio_result) :string
 {
-//    switch($portfolio_result) {
-//        case array_key_exists('image',$portfolio_result):
-//        case array_key_exists('project_url',$portfolio_result):
-//        case array_key_exists('project_name',$portfolio_result):
-//            return $portfolio_result['project_url'] . $portfolio_result['image'] . $portfolio_result['project_name'];
-//        default: return 'false';
-//    }
-        $result = '';
-        foreach ($portfolio_result as $row) {
-            $result .= '<div class="cards">
-                    <div class="proj"  style="background-image: url(\'' . $row['image'] . '\');">' .
-                '<a href=' . $row['project_url'] . '>' . $row['project_name'] . '</a>
+            $result = '';
+            foreach ($portfolio_result as $row) {
+                if(array_key_exists('project_url', $row) && array_key_exists('image', $row) && array_key_exists('project_name', $row)) {
+                    $result .= '<div class="cards">
+                    <div class="proj" style="background-image: url(\'' . $row['image'] . '\');">' .
+                        '<a href=' . $row['project_url'] . '>' . $row['project_name'] . '</a>
                     </div>'
-                . $row['project_name'] .
-                '</div>';
-        }
-        return $result;
+                        . $row['project_name'] .
+                        '</div>';
+                } else {
+                    return 'error';
+                }
+            }
+            return $result;
 }
 
 /*
@@ -146,5 +143,19 @@ function push_project(string $proj_img,$proj_url,$name,pdo $db) {
     $query->bindParam(':image',$proj_img);
     $query->bindParam(':project_url',$proj_url);
     $query->bindParam(':name',$name);
+    return $query->execute();
+}
+
+/*
+ * takes the inputted string and db and then turns delete column number to 1 dependent on string name given
+ *
+ * @param these are the strings that have been inputted on the form and the db
+ *
+ * @returns a value of 1 to one of the fields
+ *
+ */
+function delete_proj(string $proj_delete, pdo $db) :int {
+    $query=$db->prepare("UPDATE `portfolio` SET `delete` = 1 WHERE `project_name` = :name;");
+    $query->bindParam(':name',$proj_delete);
     return $query->execute();
 }

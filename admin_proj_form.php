@@ -15,13 +15,23 @@ require 'pull_data.php';
          <h3>Insert a new image for project 1</h3>
          <input type="text" name="proj_img" />
          <h3>Insert a new url for project 1</h3>
-         <input type="text" name="proj_url" />
+         <input type="text" name="proj_url" /><br>
+
+        <h3>delete a project</h3>
+     <select name="proj_delete">
+         <option disabled="disabled"></option>
+         <option>project1</option>
+         <option>project2</option>
+         <option>project3</option>
+         <option>project4</option>
+         <option>project5</option>
+         <option>project6</option>
+     </select>
+
 
 <section id="project" class="pageThree">
     <div class="showcase">
-        <div class="cards">
             <?php echo $proj?>
-        </div>
     </div>
     </div>
 </section>
