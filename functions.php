@@ -114,24 +114,20 @@ function portfolio_output(pdo $db) :array
 // */
 function grab_result(array $portfolio_result) :string
 {
-
-//    switch($portfolio_result) {
-//        case array_key_exists('image',$portfolio_result):
-//        case array_key_exists('project_url',$portfolio_result):
-//        case array_key_exists('project_name',$portfolio_result):
-//            return $portfolio_result['project_url'] . $portfolio_result['image'] . $portfolio_result['project_name'];
-//        default: return 'false';
-//    }
-        $result = '';
-        foreach ($portfolio_result as $row) {
-            $result .= '<div class="cards">
-                    <div class="proj"  style="background-image: url(\'' . $row['image'] . '\');">' .
-                '<a href=' . $row['project_url'] . '>' . $row['project_name'] . '</a>
+            $result = '';
+            foreach ($portfolio_result as $row) {
+                if(array_key_exists('project_url', $row) && array_key_exists('image', $row) && array_key_exists('project_name', $row)) {
+                    $result .= '<div class="cards">
+                    <div class="proj" style="background-image: url(\'' . $row['image'] . '\');">' .
+                        '<a href=' . $row['project_url'] . '>' . $row['project_name'] . '</a>
                     </div>'
-                . $row['project_name'] .
-                '</div>';
-        }
-        return $result;
+                        . $row['project_name'] .
+                        '</div>';
+                } else {
+                    return 'error';
+                }
+            }
+            return $result;
 }
 
 /*
