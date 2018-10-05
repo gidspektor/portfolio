@@ -1,9 +1,8 @@
 <?php
 
-
 use PHPunit\Framework\Testcase;
 
-require '../pull_data.php';
+require '../functions.php';
 
 
 
@@ -81,7 +80,7 @@ class StackTest extends TestCase
                     </div>one</div><div class="cards">
                     <div class="proj" style="background-image: url(\'six\');"><a href=www.five.com>four</a>
                     </div>four</div>';
-        $arrayResults = [['project_name'=>'one', 'project_url'=>'www.two.com', 'image'=>'three'],['project_name'=>'four', 'project_url'=>'www.five.com', 'image'=>'six']];
+        $arrayResults = [['project_name' => 'one', 'project_url' => 'www.two.com', 'image' => 'three'], ['project_name' => 'four', 'project_url' => 'www.five.com', 'image' => 'six']];
         $case = grab_result($arrayResults);
         $this->assertEquals($case, $expected);
     }
@@ -89,7 +88,7 @@ class StackTest extends TestCase
     public function testgrab_resultfail()
     {
         $expected = "error";
-        $arrayResults = [["goals" => "Also sarnies are life."],["stuff" => "Also sarnies are life."]];
+        $arrayResults = [["goals" => "Also sarnies are life."], ["stuff" => "Also sarnies are life."]];
         $case = grab_result($arrayResults);
         $this->assertEquals($case, $expected);
     }
