@@ -9,7 +9,7 @@ require 'pull_data.php';
 </head>
 <body>
     <nav>
-        <a href="#"><img src="logo.png" alt="gideon spektor logo"/></a>
+        <a href="#"><img src="images/logo.png" alt="gideon spektor logo"/></a>
         <div class="navRight">
              <ul>
                  <li><a href="#about" class="navText">About me</a></li>
